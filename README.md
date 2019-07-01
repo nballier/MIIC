@@ -40,10 +40,31 @@ regression model???
 good model, residuals, godd fit, overfitting, predictions
 
 
+ASSESSMENT
+•	Input : 8 sites pour des groupes de 3 personnes
+o	avec un ficher csv : url / contenu texte / métriques on-page (nombre de sessions / temps passé par page)
+•	Output
+o	livrable sur "que sortez vous de google analytics"
+o	corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé ..
+o	corrélation qualité des pages d'un point de vue sémantique & leur performance
+
+
+
 
 TEST
-```javascriptfunction test() { console.log("look ma`, no spaces");}``` 
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
 
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+
+Ordered
+
+1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
  
 
