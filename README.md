@@ -7,7 +7,7 @@ Course outine for "Nouvelles frontières de l’économie connectée" 2019-2020
 
 
 DAY 1 (22) 
-o	LC : Web SEO & Google Analytics
+o	LC : Web SEO & Google Analytics \\
 o	NB : Data science for beginners
 file formats, datasets, tidy format, the Rstudio GUI, very rudimentary stats: what do we mean by correlation?
 
@@ -40,6 +40,8 @@ regression model???
 good model, residuals, godd fit, overfitting, predictions
 
 
- 
+
+TEST
+```javascriptfunction test() { console.log("look ma`, no spaces");}``` 
  
 
