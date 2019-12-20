@@ -1,27 +1,29 @@
 # MIIC
 
-Master Professionnel bilingue « Intelligence et Innovation Culturelles »
-Formation aux métiers de la stratégie sémiologique
+Master Professionnel bilingue « Intelligence et Innovation Culturelles » \\
+Formation aux métiers de la stratégie sémiologique \\
 
 
-Cultural Intelligence and Innovation Semiotic Strategy
-Trends, consulting, development, communication
+Cultural Intelligence and Innovation Semiotic Strategy \\
+Trends, consulting, development, communication \\
 
 
 
-**LCFDE050	NOUVELLES FRONTIERES DE L'ÉCONOMIE CONNECTÉE**
+**LCFDE050	NOUVELLES FRONTIERES DE L'ÉCONOMIE CONNECTÉE**  \\
 
-*Course outline for "Nouvelles frontières de l’économie connectée" 2019-2020, June 22-26*
+*Course outline for "Nouvelles frontières de l’économie connectée" 2019-2020, June 22-26* \\
 
-**References**:
-Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridisciplinaire de l'économie en ligne*, Presses des Mines. 
-[Julia Silge and David Robinson (2017) *Text mining with R*, O'Reilly.](https://www.tidytextmining.com/)
+**References**: \\
+Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridisciplinaire de l'économie en ligne*, Presses des Mines. \\
+[Julia Silge and David Robinson (2017) *Text mining with R*, O'Reilly.](https://www.tidytextmining.com/) \\
 
 
 
 **DAY 1 (June 22)**
 o	LC : Web SEO & Google Analytics \\
+
 o	NB : Data science for beginners \\
+
 The learning-by-doing paradigm
 file formats, datasets, tidy format, the Rstudio GUI, very basic stats: what do we mean by 'correlation'?
 
