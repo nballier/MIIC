@@ -13,13 +13,13 @@ Trends, consulting, development, communication
 
 *Course outline for "Nouvelles frontières de l’économie connectée" 2019-2020, June 22-26*  
 
-**References**: \\
+**References**:  
 Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridisciplinaire de l'économie en ligne*, Presses des Mines.  
 [Julia Silge and David Robinson (2017) *Text mining with R*, O'Reilly.](https://www.tidytextmining.com/)  
 
 
 
-**DAY 1 (June 22)**
+**DAY 1 (June 22)**  
 o	LC : Web SEO & Google Analytics  
 
 o	NB : Data science for beginners  
@@ -28,7 +28,7 @@ The learning-by-doing paradigm
 file formats, datasets, tidy format, the Rstudio GUI, very basic stats: what do we mean by 'correlation'?
 
 
-**DAY 2 (June 23)**
+**DAY 2 (June 23)**  
 o	LC : Google Analytics : le détail  
 o	NB: the Google analytics dataset  
 Crash course to using R :  
@@ -36,7 +36,7 @@ loading a dataset with R
 selecting variables with R, basic data wrangling  
 basic data visualisation (dataViz), basic plots  
 
-**DAY 3 (June 24)**  
+**DAY 3 (June 24)**    
 o	LC : crawlers and bots : spelling out the expected content  
 
 o	NB: sentiment analysis for beginners : the basics  
@@ -44,7 +44,7 @@ o	NB: sentiment analysis for beginners : the basics
 Activity 1: Using TAALES to extract sentiment analysis data : basic plots and comnentary
 
 
-**DAY 4 (June 25)**
+**DAY 4 (June 25)**  
 •	LC "que sortez vous de google analytics" ?  
 	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the {quanteda} package for readibility metrics  
 o	corrélation qualité des pages d'un point de vue sémantique & leur performance  
@@ -59,7 +59,7 @@ regression model???
 good model, residuals, good fit, overfitting, predictions  
 
 
-**ASSESSMENT** (report to be uploaded by Sat 27 midnight) 
+**ASSESSMENT** (report to be uploaded by Sat 27 midnight)  
 •	Input : 8 sites pour des groupes de 3 personnes
 o	avec un ficher csv : url / contenu texte / métriques on-page (nombre de sessions / temps passé par page)
 •	Output
