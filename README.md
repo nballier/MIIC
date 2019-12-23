@@ -13,6 +13,14 @@ Trends, consulting, development, communication
 
 *Course outline for "Nouvelles frontières de l’économie connectée" 2019-2020, June 22-26*  
 
+
+**Intervenants**
+[Louis Chevant, Fondateur SmartKeyword](https://smartkeyword.io/a-propos/)
+[Nicolas Ballier, professeur de linguistique anglaise](http://www.clillac-arp.univ-paris-diderot.fr/user/nicolas_ballier)
+Nicolas Ballier est agrégé d’anglais, professeur de linguistique anglaise à l'Universite de Paris. Ses travaux portent sur l'apport de l'automatisation à l'analyse linguistique. Il s’intéresse tant aux corpus oraux qu'aux corpus écrits. Il a dirigé deux projets de recherche européens en linguistique anglaise. Ses projets actuels portent sur ce qu'apprennent les réseaux de neurones pour la traduction automatique et sur le traitement automatique des données extraites des corpus d'apprenants.
+nicolas.ballier@univ-paris.fr
+
+
 **References**:  
 Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridisciplinaire de l'économie en ligne*, Presses des Mines.  
 [Julia Silge and David Robinson (2017) *Text mining with R*, O'Reilly.](https://www.tidytextmining.com/)  
@@ -20,12 +28,12 @@ Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridiscipl
 
 
 **DAY 1 (June 22)**  
-o	LC : Web SEO & Google Analytics  
-
-o	NB : Data science for beginners  
-
+o	LC : Web SEO & Google Analytics (AM)  
+o	NB : Data science for beginners (PM)
 The learning-by-doing paradigm  
-file formats, datasets, tidy format, the Rstudio GUI, very basic stats: what do we mean by 'correlation'?
+[R](https://cran.r-project.org/bin/windows/base/) and [the Rstudio GUI](https://rstudio.com/products/rstudio/download/)
+file formats, datasets, tidy format
+very basic stats: what do we mean by 'correlation'?
 
 
 **DAY 2 (June 23)**  
@@ -38,17 +46,16 @@ basic data visualisation (dataViz), basic plots
 
 **DAY 3 (June 24)**    
 o	LC : crawlers and bots : spelling out the expected content  
-
 o	NB: sentiment analysis for beginners : the basics  
 [The NLP Tools for the Social Sciences](https://www.linguisticanalysistools.org/)  
-Activity 1: Using TAALES to extract sentiment analysis data : basic plots and comnentary
+Activity 1: Using TAALES to extract sentiment analysis data : basic plots and commentary
 
 
 **DAY 4 (June 25)**  
-•	LC "que sortez vous de google analytics" ?  
-	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the {quanteda} package for readibility metrics  
+•	LC "que sortez-vous de google analytics" ?  
+	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the R {quanteda} package for readibility metrics  
 o	corrélation qualité des pages d'un point de vue sémantique & leur performance  
-Activity 2: Using quanteda to assess complexity  : basic plots and comnentary  
+Activity 2: Using quanteda to assess complexity : basic plots and commentary  
 
 
 **DAY 5  (June 26)**  
