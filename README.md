@@ -15,9 +15,9 @@ Trends, consulting, development, communication
 
 
 **Intervenants**
-[Louis Chevant, Fondateur SmartKeyword](https://smartkeyword.io/a-propos/)
-[Nicolas Ballier, professeur de linguistique anglaise](http://www.clillac-arp.univ-paris-diderot.fr/user/nicolas_ballier)
-Nicolas Ballier est agrégé d’anglais, professeur de linguistique anglaise à l'Universite de Paris. Ses travaux portent sur l'apport de l'automatisation à l'analyse linguistique. Il s’intéresse tant aux corpus oraux qu'aux corpus écrits. Il a dirigé deux projets de recherche européens en linguistique anglaise. Ses projets actuels portent sur ce qu'apprennent les réseaux de neurones pour la traduction automatique et sur le traitement automatique des données extraites des corpus d'apprenants.
+[Louis Chevant, Fondateur SmartKeyword](https://smartkeyword.io/a-propos/)  
+[Nicolas Ballier, professeur de linguistique anglaise](http://www.clillac-arp.univ-paris-diderot.fr/user/nicolas_ballier)  
+Nicolas Ballier est agrégé d’anglais, professeur de linguistique anglaise à l'Universite de Paris. Ses travaux portent sur l'apport de l'automatisation à l'analyse linguistique. Il s’intéresse tant aux corpus oraux qu'aux corpus écrits. Il a dirigé deux projets de recherche européens en linguistique anglaise. Ses projets actuels portent sur ce qu'apprennent les réseaux de neurones pour la traduction automatique et sur le traitement automatique des données extraites des corpus d'apprenants.  
 nicolas.ballier@univ-paris.fr
 
 
@@ -31,8 +31,8 @@ Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridiscipl
 o	LC : Web SEO & Google Analytics (AM)  
 o	NB : Data science for beginners (PM)
 The learning-by-doing paradigm  
-[R](https://cran.r-project.org/bin/windows/base/) and [the Rstudio GUI](https://rstudio.com/products/rstudio/download/)
-file formats, datasets, tidy format
+[R](https://cran.r-project.org/bin/windows/base/) and [the Rstudio GUI](https://rstudio.com/products/rstudio/download/)  
+file formats, datasets, tidy format  
 very basic stats: what do we mean by 'correlation'?
 
 
@@ -55,7 +55,9 @@ Activity 1: Using TAALES to extract sentiment analysis data : basic plots and co
 •	LC "que sortez-vous de google analytics" ?  
 	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the R {quanteda} package for readibility metrics  
 o	corrélation qualité des pages d'un point de vue sémantique & leur performance  
-Activity 2: Using quanteda to assess complexity : basic plots and commentary  
+Activity 2: Using {quanteda} to assess complexity : basic plots and commentary
+(https://quanteda.io/)  
+[Tutorials](https://tutorials.quanteda.io/)
 
 
 **DAY 5  (June 26)**  
