@@ -52,9 +52,9 @@ Activity 1: Using TAALES to extract sentiment analysis data : basic plots and co
 
 
 **DAY 4 (June 25)**  
-•	LC "que sortez-vous de google analytics" ?  
-	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the R {quanteda} package for readibility metrics  
-o	corrélation qualité des pages d'un point de vue sémantique & leur performance  
+o	LC "que sortez-vous de google analytics" ?  
+o	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the R {quanteda} package for readibility metrics  
+	corrélation qualité des pages d'un point de vue sémantique & leur performance  
 Activity 2: Using {quanteda} to assess complexity : basic plots and commentary
 (https://quanteda.io/)  
 [Tutorials](https://tutorials.quanteda.io/)
@@ -62,8 +62,8 @@ Activity 2: Using {quanteda} to assess complexity : basic plots and commentary
 
 **DAY 5  (June 26)**  
 o	LC : discussing preliminary findings  
-o NB  : interacting with a data scientist (data modelling)  
-o corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé ..  
+o	NB  : interacting with a data scientist (data modelling)  
+ corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé ..  
 regression model???   
 good model, residuals, good fit, overfitting, predictions  
 
