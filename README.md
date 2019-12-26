@@ -70,7 +70,7 @@ good model, residuals, good fit, overfitting, predictions
 
 **ASSESSMENT** (report to be uploaded by Sat 27 midnight)  
 •	Input : 8 sites pour des groupes de 3 personnes  
-o	avec un ficher csv : url / contenu texte / métriques on-page (nombre de sessions / temps passé par page)
+o	avec un ficher csv : url / contenu texte / métriques on-page (nombre de sessions / temps passé par page)  
 •	Output  
 o	livrable sur "que sortez vous de google analytics"  
 o	corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé  
