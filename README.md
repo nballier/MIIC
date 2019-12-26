@@ -42,7 +42,7 @@ o	NB: the Google analytics dataset
 Crash course to using R :  [tutorial](https://paulalisson.github.io/teaching.html)  
 loading a dataset with R   
 selecting variables with R, basic data wrangling  
-basic data visualisation (dataViz), basic plots  
+basic data visualisation ([dataViz](https://www.r-graph-gallery.com/)), basic plots  
 
 **DAY 3 (June 24)**    
 o	LC : crawlers and bots : spelling out the expected content  
@@ -78,7 +78,7 @@ o	corrélation qualité des pages d'un point de vue sémantique & leur performan
 
 
 **SKILLS**
-Having conducted a report on a small dataset allows to you to be more familiar with what a programming language can do for business. You will be acquainted  with the notions of datasets, NLP, wokflow and, hopefully, modelling. This will help you interact with data analysts. You will NOT become a data scientist in five days but this small-scale project will give you an idea of what data mining or data science potentially means for companies.   
+Having conducted a report on a small dataset allows to you to be more familiar with what a programming language can do for business. You will be acquainted  with the notions of *datasets*, *NLP*, *wokflow* and, hopefully, *modelling*. This will help you interact with data analysts. You will NOT become a data scientist in five days but this small-scale project will give you an idea of what data mining or data science potentially means for companies.   
 
 
 
