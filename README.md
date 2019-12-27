@@ -47,6 +47,7 @@ basic data visualisation ([dataViz](https://www.r-graph-gallery.com/)), basic pl
 **DAY 3 (June 24)**    
 o	LC : crawlers and bots : spelling out the expected content  
 o	NB: sentiment analysis for beginners : the basics  
+[on-the-fly NLP analysis](http://corenlp.run/)  
 [The NLP Tools for the Social Sciences](https://www.linguisticanalysistools.org/)  
 Activity 1: Using TAALES to extract sentiment analysis data : basic plots and commentary
 
