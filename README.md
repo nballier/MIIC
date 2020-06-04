@@ -64,9 +64,10 @@ Activity 2: Using {quanteda} to assess complexity : basic plots and commentary
 **DAY 5  (June 26)**  
 o	LC : discussing preliminary findings  
 o	NB  : interacting with a data scientist (data modelling)  
- corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé ..  
+corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé ..  
 regression model???   
 good model, residuals, good fit, overfitting, predictions  
+
 
 
 **ASSESSMENT** (report to be uploaded by Sat 27 midnight)  
@@ -75,11 +76,12 @@ o	avec un ficher csv : url / contenu texte / métriques on-page (nombre de sessi
 •	Output  
 o	livrable sur "que sortez vous de google analytics"  
 o	corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé  
-o	corrélation qualité des pages d'un point de vue sémantique & leur performance  
+o corrélation qualité des pages d'un point de vue sémantique & leur performance  
+
 
 
 **SKILLS**
-Having conducted a report on a small dataset allows to you to be more familiar with what a programming language can do for business. You will be acquainted  with the notions of *datasets*, *NLP*, *wokflow* and, hopefully, *modelling*. This will help you interact with data analysts. You will NOT become a data scientist in five days but this small-scale project will give you an idea of what data mining or data science potentially means for companies.   
+Having conducted a report on a small dataset allows to you to be more familiar with what a programming language can do for business. You will be acquainted  with the notions of *datasets*, *NLP*, *workflow* and, hopefully, *modelling*. This will help you interact with data analysts. You will NOT become a data scientist in five days but this small-scale project will give you an idea of what data mining or data science potentially means for companies.   
 
 
 
