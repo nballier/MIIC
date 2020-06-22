@@ -36,26 +36,36 @@ TASK : find your favourite website for Data Vizualisation with R
 https://raw.githubusercontent.com/viveksrinivasanss/Data_Science_Using_R/master/code/statistical_visualization_in_r.Rmd
 
 
+TASK: open your dataset with R 
+===============================
 
-**Using R : .R and .rmd**
-Basic uses of R
-R prise en main (French, 10 min)
-https://www.youtube.com/watch?v=MCgkVbhT0PA
 
-script versus comment; the {knitr} package ({shiny}
-
-TASK:  
-Find a shiny interactive demo 
+TASK: Create your wordcloud in R 
+=================================
+https://www.youtube.com/watch?v=oVVvG035vQc (4 mins)
+https://www.youtube.com/watch?v=EiLSelfY1BU  (21 mins)
 
 
 **Digital Humanities / Data Science** 
 o	NB: data mining with {quanteda} the basics  
 TASK: Find {quanteda}  tutorials
 find and replicate scripts for sentiment analysis with R
+
 o	NB: sentiment analysis for beginners : the basics  
 [on-the-fly NLP analysis](http://corenlp.run/)
 
 
-**ALTERNATES : TAALES for sentiment analyis**
-[The NLP Tools for the Social Sciences](https://www.linguisticanalysistools.org/)  
+
+**Using R : .R and .rmd**
+Basic uses of R
+R prise en main (French, 10 min)
+https://www.youtube.com/watch?v=MCgkVbhT0PA
+script versus comment; the {knitr} package ({shiny}
+TASK:  
+Find a shiny interactive demo 
+
+
+
+
+
 
