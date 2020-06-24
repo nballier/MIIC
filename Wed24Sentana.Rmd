@@ -1,0 +1,277 @@
+---
+title: "Pareto Chart,  Sentiment Analysis (1)"
+author: "Nicolas Ballier"
+date: "6/24/2020"
+output: html_document
+---
+
+
+# Rmarkdown-----------  
+# for your report you may use R mardown
+#https://rmarkdown.rstudio.com/authoring_quick_tour.html
+install.packages("rmarkdown")
+install.packages('knitr') 
+library(rmarkdown)
+library(knitr)
+
+# Fun fact: you may write books with R
+<https://bookdown.org/>
+<https://bookdown.org/yihui/bookdown/>
+<https://www.tidytextmining.com/>  
+  
+#to erase all objects
+#rm(list=ls())
+
+
+```{r, Revision}
+# REVISION-----------------
+# make sure I know where my data is saved (and opened)
+
+
+## set this directory as working directory
+
+# to launch the functions included in the package called {quanteda}
+#install.packages("quanteda")
+#install.packages("tidyverse")
+library(tidyverse)
+library(quanteda)
+
+# load and inspect my dataset
+
+# To open my dataset called "data1.csv" in my working directory
+#install.packages("readr")
+library(readr)
+data <- read_csv("data1.csv")
+
+# getting the number of tokens in {quanteda} for the English column
+mycorpus <- corpus(data1$`Conteu (en)`)
+mydfm <- dfm(mycorpus)
+ntok <- ntoken(mydfm)
+data1$ntoken_en <- ntoken(dfm(corpus(data1$`Conteu (en)`)))
+
+# TASK: getting the number of tokens in {quanteda} for the French column
+
+
+```
+
+
+## NB if I know where to find my .CSV file 
+data <- read_csv(file.choose())
+
+# subset my dataset by columns and subsets (editorial vs. transactional)
+
+# subset data 
+# subset 
+edito <- data2[data2$`Type de page`=="Editorial",]
+# Mac: edito <- data2[data2$`Type de page`=="Editorial",]
+# PC:  edito <- data2[data2$'Type.de.page'=="Editorial",]
+
+# TASK subset for transactional pages
+# if you re-use this code snippet for PC, thank Yvan !!
+transac <- data2[data2$'Type.de.page'=="Transactionnel",] # for PC
+transac <- data2[data2$`Type de page`=="Transactionnel",] # for mac
+
+# plot the "best" pages 
+## DISCUSSION : operationalise your Research Question  
+?sort 
+?head
+?min
+?max
+
+
+#select 10 best reading time
+library(dplyr)
+top10 <- data %>% 
+arrange(desc(`Temps moyen passé sur la page (s)`))
+
+
+
+
+```{r, plots}
+# plot density for number of visits
+plot(density(data$`Nombre de visites`), main="Density of number of visits (full dataset)")
+
+```
+
+
+
+```{r, boxplots}
+#TASK : what about editorial vs. transactional pages??
+# if you re-use this code snippet, thank Yvan !!
+boxplot(edito$ntoken_en,main="Number of tokens for editorial content") 
+boxplot(transac$ntoken_en,main="Number of tokens for transactional content") 
+plot(density(edito$ntoken_en),main="Density estimation of tokens for editorial content")
+plot(density(transac$ntoken_en),main="Density estimation of tokens for transactional content")
+# get more details about the function "plot()" ?
+```
+
+install.packages("qcc")
+
+
+datapages <- data[,c(2,3)] 
+
+pareto.chart(data$`Nombre de visites` , xlab = "pages", las=1, ylab = "Number of visits", main="Pareto Chart of Number of visits ")
+pareto.chart(datapages,ylab = "Number of visits")
+
+```{r, Pareto chart}
+library(qcc)
+pareto.chart(data$`Nombre de visites` , xlab = "pages", las=1, ylab = "Number of visits", main="Pareto Chart of Number of visits ")
+
+```
+
+
+
+
+# HOMEWORK------------
+# Homework : find how to superimpose density plots ??
+## best query??  
+# NB: How to superimpose density curves in R?
+# How to overlay density plots in R? - Stack Overflow
+# https://stackoverflow.com/questions/21563864/ggplot2-overlay-density-plots-r
+
+library(ggplot2)
+value <- c(density(data$`Nombre de visites`,density(data$`Temps moyen passé sur la page (s)`,density(data$`Nombre de visites`)
+ggplot(data, aes(x=value)) + geom_density(aes(group=factor))
+
+# How to Superimpose Multiple Density Curves Into One Plot in R
+# https://stackoverflow.com/questions/1366853/how-to-superimpose-multiple-density-curves-into-one-plot-in-r
+
+# https://stackoverflow.com/questions/1366853/how-to-superimpose-multiple-density-curves-into-one-plot-in-r
+require(lattice)
+dnow <- read.table('http://dpaste.com/88561/plain/')
+densityplot(~V1, groups=V2, data=dnow)
+
+# TASK: compare sentiments for best editorial pages and best trasactional pages
+table(data$`Type de page`)
+
+
+# for Editorial versus Transactionnel : different number of datapoints ??
+library(ggplot2)
+library(reshape2)
+x <- list(edito$`Nombre de visites`,transac$`Nombre de visites`)
+data<- melt(x)
+ggplot(data,aes(x=value, fill=L1)) + geom_density(alpha=0.25)
+ggplot(data,aes(x=value, fill=L1)) + geom_histogram(alpha=0.25)
+ggplot(data,aes(x=L1, y=value, fill=L1)) + geom_boxplot()
+
+#https://stackoverflow.com/questions/21563864/ggplot2-overlay-density-plots-r
+ggplot(data, aes(x=value)) + geom_density(aes(group=factor))
+
+
+x <- data.frame(data2$X1,data2$Page,data2$`Nombre de visites`,data2$`Temps moyen passé sur la page (s)`)
+library(ggplot2);library(reshape2)
+data<- melt(x)
+data<- melt(x, value.name = "X1")
+
+ggplot(data,aes(x=value, fill=variable)) + geom_density(alpha=0.25)
+ggplot(data,aes(x=value, fill=variable)) + geom_histogram(alpha=0.25)
+ggplot(data,aes(x=variable, y=value, fill=variable)) + geom_boxplot()
+
+## EXPLORATORY ANALYSIS---------
+## Quote and thank Ivan if you're this code snippet
+
+https://stackoverflow.com/questions/24212739/how-to-find-the-highest-value-of-a-column-in-a-data-frame-in-r
+colMax <- function(data) sapply(data, max, na.rm = TRUE)
+colSort <- function(data, ...) sapply(data, sort, ...)
+colMax(dat)
+
+max(ozone$Ozone, na.rm = TRUE)
+
+To get the max of all columns, you want:
+apply(ozone, 2, function(x) max(x, na.rm = TRUE))
+
+
+In response to finding the max value for each column, you could try using the apply() function:
+apply(data$text, MARGIN = 2, function(x) max(x, na.rm=TRUE))
+
+# sentiments  of the 10 best pages ?
+data$text <- data$`Conteu (en)`
+
+
+# TASK :  plot the sentiments of the 10 most/less popular pages-------
+# The EmoLex project (Emotion Lexicon)
+# http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm
+# NRC http://www.purl.org/net/NRCemotionlexicon
+#https://cran.r-project.org/web/packages/syuzhet/vignettes/syuzhet-vignette.html
+
+data$`Temps moyen passé sur la page (s)`
+
+library(dplyr)
+#select 10 best
+top10 <- data %>% 
+arrange(desc(`Temps moyen passé sur la page (s)`))
+
+# extract all the sentences of the dataset
+s_v <- get_sentences(top10$text)
+# get all sentiment scores
+## be patient
+# list score per line 
+nrc_data <- get_nrc_sentiment(s_v)
+
+sum_nrctop10 <- apply(nrc_data,2,sum)
+sentiments <- colnames(nrc_data)
+# plot the different sentiments 
+barplot(sum_nrctop10,xlab=sentiments)
+
+# No sentenceID 
+#overall scores over all the texts of the website (sentence per sentence)
+s_v <- get_sentences(data$text)
+s_v <- get_sentences(my_example_text)
+nrc_data <- get_nrc_sentiment(s_v)
+
+
+### TASK :  prettify your barplots
+# https://www.r-graph-gallery.com/209-the-options-of-barplot.html
+## https://stackoverflow.com/questions/30816659/how-can-i-have-different-color-for-each-bar-of-stack-barplots-in-r?rq=1
+
+# Conservative 8-color palette adapted for color blindness, with first color = "black".
+# Wong, Bang. "Points of view: Color blindness." nature methods 8.6 (2011): 441-441.
+colorBlind.8 <- c(black="#000000", orange="#E69F00", skyblue="#56B4E9", bluegreen="#009E73",
+    yellow="#F0E442", blue="#0072B2", reddish="#D55E00", purplish="#CC79A7")
+mydata <- matrix(nrow=2,ncol=6, rbind(sample(1:12, replace=T)))
+cols <- colorBlind.8[1:ncol(mydata)]
+bar2col <- colorBlind.8[8]
+barplot(mydata[1,], xlim=c(0,25), horiz=T, col=cols, axisnames=T,
+    legend.text=c("A","B","C","D","E","F"), main="Stack barplot")
+barplot(mydata[2,], offset=mydata[1,], add=T, axes=F, axisnames=F, horiz=T, col=bar2col)
+
+
+
+library(quanteda)
+# more at <https://quanteda.io/>
+mycorpus <- corpus(data$`Conteu (en)`)
+mycorpus <- corpus(data)
+summary(mycorpus)
+
+# stopwrds 
+my_dfm <- dfm(mycorpus, remove = stopwords("english"), remove_punct = TRUE)
+my_dfm
+
+#wordcloud
+set.seed(100)
+textplot_wordcloud(my_dfm, min_count = 6, random_order = FALSE,
+                   rotation = .25, 
+                   colors = RColorBrewer::brewer.pal(8,"Dark2"))
+
+# lexical diversity
+stat_lexdiv <- textstat_lexdiv(my_dfm)
+head(stat_lexdiv, 5)
+tail(stat_lexdiv, 5)
+
+# readability 
+textstat_readability(mycorpus,measure = "Flesch", remove_hyphens = TRUE,min_sentence_length = 1,
+  max_sentence_length = 10000,intermediate = FALSE)
+scores <- textstat_readability(mycorpus,measure = "Flesch", remove_hyphens = TRUE,min_sentence_length = 1,  max_sentence_length = 10000,intermediate = FALSE)
+
+data$Flesh <- scores$Flesch
+textstat_readability(txt, measure = c("FOG", "FOG.PSK", "FOG.NRI"))
+textstat_readability(data_corpus_inaugural[48:58],
+                     measure = c("Flesch.Kincaid", "Dale.Chall.old"))
+
+#CORRELATION
+loading a file
+data$Flesh <- as.numeric(data$Flesh)
+as.numeric(dataset3[[1]])
+plot(data$Flesh~data$`Temps moyen passé sur la page (s)`, data=data)
+plot(data$Flesh~data$`Temps moyen passé sur la page (s)`, data=data)
+
