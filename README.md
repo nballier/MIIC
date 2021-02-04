@@ -70,8 +70,8 @@ good model, residuals, good fit, overfitting, predictions
 
 
 **DAY 6 (July 6th AM)**
-o	LC :  discussing preliminary findings  
-o	NB  : interacting with a data scientist (data modelling)  
+o	LC :  Google console (provisional)  
+o	NB  : Using the R package for Google Analytics (provisional)  
 
 **PRESENTATIONS (July 6th PM)**
 4h : group presentations , comments and feedback
