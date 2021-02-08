@@ -26,35 +26,33 @@ Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridiscipl
 [Julia Silge and David Robinson (2017) *Text mining with R*, O'Reilly.](https://www.tidytextmining.com/)  
 
 
-
 **DAY 1 (Feb 10th)**  
-o	LC : Web SEO & Google Analytics (AM)  
-o	NB : Data science for beginners (PM)  
+o	LC : Web SEO & Google Analytics (9h-11h)  
+o	NB : Data science for beginners (Why R?) (11h-13h)  
 The learning-by-doing paradigm  
 [R](https://cran.r-project.org/bin/windows/base/) and [the Rstudio GUI](https://rstudio.com/products/rstudio/download/)  
 file formats, datasets, tidy format  
 very basic stats: what do we mean by 'correlation'?
 
-
 **DAY 2 (March 17th)**  
-o	LC : Google Analytics : le détail  
-o	NB: the Google analytics dataset  
+o	LC : Google Analytics : le détail  (9h-11h)
+o	NB: the Google analytics dataset  (11h-13h)  
 Crash course to using R :  [tutorial](https://paulalisson.github.io/teaching.html)  
 loading a dataset with R   
 selecting variables with R, basic data wrangling  
 basic data visualisation ([dataViz](https://www.r-graph-gallery.com/)), basic plots  
 
 **DAY 3 (April 28th)**    
-o	LC : crawlers and bots : spelling out the expected content  
-o	NB: sentiment analysis for beginners : the basics  
+o	LC : crawlers and bots : spelling out the expected content  (9h-11h)
+o	NB: sentiment analysis for beginners : the basics  (11h-13h)  
 [on-the-fly NLP analysis](http://corenlp.run/)  
 [The NLP Tools for the Social Sciences](https://www.linguisticanalysistools.org/)  
 Activity 1: Using TAALES to extract sentiment analysis data : basic plots and commentary
 
 
 **DAY 4 (June 2nd)**  
-o	LC "que sortez-vous de google analytics" ?  
-o	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the R {quanteda} package for readibility metrics  
+o	LC "que sortez-vous de google analytics" ?   / appli smartkeywords (9h-11h)
+o	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the R {quanteda} package for readibility metrics  (11h-13h)  
 	corrélation qualité des pages d'un point de vue sémantique & leur performance  
 Activity 2: Using {quanteda} to assess complexity : basic plots and commentary
 (https://quanteda.io/)  
@@ -62,16 +60,18 @@ Activity 2: Using {quanteda} to assess complexity : basic plots and commentary
 
 
 **DAY 5  (June 30th)**  
-o	LC :  discussing preliminary findings  
-o	NB  : interacting with a data scientist (data modelling)  
+o	LC :  discussing preliminary findings  (9h-11h)
+o	NB  : interacting with a data scientist (data modelling)  (11h-13h)  
 corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé ..  
 regression model???   
 good model, residuals, good fit, overfitting, predictions  
 
 
 **DAY 6 (July 6th AM)**
-o	LC :  Google console (provisional)  
-o	NB  : Using the R package for Google Analytics (provisional)  
+alternate:
+o	LC :  Google console (provisional)  (9h-11h)
+o	NB  : Using the R package for Google Analytics (provisional) (11h-13h)  
+
 
 **PRESENTATIONS (July 6th PM)**
 4h : group presentations , comments and feedback
@@ -81,10 +81,9 @@ o	NB  : Using the R package for Google Analytics (provisional)
 •	Input :  pour des groupes de 3 personnes  
 o	avec un ficher csv : url / contenu texte / métriques on-page (nombre de sessions / temps passé par page)  
 •	Output  
-o	livrable sur "que sortez vous de google analytics"  
+o	livrable sur "que sortez vous de google analytics"  : retour client sur les performances de son site
 o	corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé  
 o corrélation qualité des pages d'un point de vue sémantique & leur performance  
-
 
 
 **SKILLS**
