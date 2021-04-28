@@ -1,0 +1,138 @@
+---
+title: "Untitled"
+author: "NLB"
+date: "4/28/2021"
+output: html_document
+---
+
+
+```{r}
+#install.packages("rmarkdown")
+#install.packages('knitr') 
+#install.packages("quanteda")
+#install.packages("tidyverse")
+#install.packages("readr")
+#install.packages("syuzhet")
+#install.packages("dplyr")
+#install.packages("qcc")
+#install.packages("ggplot2")
+#install.packages("reshape2")
+library(rmarkdown)
+library(knitr)
+library(quanteda)
+library(tidyverse)
+library(readr)
+library(syuzhet)
+library(dplyr)
+library(qcc)
+library(ggplot2)
+library(reshape2)
+```
+
+
+```{r}
+#setwd("~/Desktop/MIIC/data-GoogleAnalytics/bis")
+ 
+#data1 <- read.csv(data1)
+```
+
+
+# REVISION----
+
+# see my dataset
+
+
+# summarize the content 
+
+
+
+# Subset my dataset by columns and subsets (editorial vs. transactional)
+```{r}
+table(data1$`Type de page`)
+edito <- data1[data1$`Type de page`=="Editorial",]
+transac <- data1[data1$`Type de page`=="Transactionnel",]
+```
+
+
+# Get the number of tokens in {quanteda} for the English column
+```{r}
+library(quanteda)
+mycorpus <- corpus(data1$`Conteu (en)`)
+mydfm <- dfm(mycorpus)
+ntok <- ntoken(mydfm)
+
+data1$ntoken_en <- ntoken(dfm(corpus(data1$`Conteu (en)`)))
+``
+# Boxplot number of tokens (French)
+```{r}
+boxplotnumberoftokens <- boxplot(data1$notoken_fr,main ="Boxplot Number of Tokens")
+```
+
+
+# Get the number of tokens in {quanteda} for the French column
+```{r}
+data1$notoken_fr <- ntoken(dfm(corpus(data1$Contenu)))
+```
+
+
+# Get the number of types in French and English
+```{r}
+data1$ntype_fr <- ntype(dfm(corpus(data1$Contenu)))
+data1$ntype_en <- ntype(dfm(corpus(data1$`Conteu (en)`)))
+```
+
+# Boxplot number of tokens (French)
+```{r}
+boxplotnumberoftokens <- boxplot(data1$notoken_fr,main ="Boxplot Number of Tokens")
+```
+
+# Compare number of tokens for editorial vs transactional pages 
+```{r}
+boxplotnumberoftokensedito <- boxplot(edito$notoken_fr,main ="Boxplot Number of Tokens for Editorial Pages")
+```
+```{r}
+boxplotnumberoftokenstransac <- boxplot(transac$notoken_fr,main ="Boxplot Number of Tokens for Transactional Pages")
+```
+
+
+# TOP 10 pages 
+```{r}
+ordered_bouncing <- arrange(data1,desc(`Taux de rebond (%)`))
+top10_bouncing <- head(ordered_bouncing,10)
+
+ordered_visits <- arrange(data1,desc(`Nombre de visites`))
+top10_visits <- head(ordered_visits,10)
+
+ordered_timespent <- arrange(data1,desc(`Temps moyen passé sur la page (s)`))
+top10_timespent <- head(ordered_timespent,10)
+
+```
+
+
+# FLOP 10 
+```{r}
+class(data1$`Nombre de visites`)
+
+ordered_visits <- arrange(data1,desc(`Nombre de visites`))
+max <- head(ordered_visits,1)
+print(max$Page)
+flop10visits <-tail(ordered_visits,10)
+```
+
+
+# TOP 5 number of visits for transactional pages
+```{r}
+ordered_visits <- arrange(transac,desc(`Nombre de visites`))
+top5_visits <- head(ordered_visits,5)
+```
+
+
+# Pareto chart for the number of visits (whole dataset)
+
+```{r, Pareto chart}
+library(qcc)
+pareto.chart(data1$`Nombre de visites` , xlab = "pages", las=1, ylab = "Number of visits", main="Pareto Chart of Number of visits ")
+
+```
+
+
