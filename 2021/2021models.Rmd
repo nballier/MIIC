@@ -1,0 +1,101 @@
+---
+title: "MIIC 4: Some NLP contributions"
+date: "06/30/2021"
+html_notebook:
+  always_allow_html: yes
+  css: template-reveal.css
+  toc: yes
+output:
+  html_document:
+    df_print: paged
+  highlight: tango
+  pdf_document: null
+bibliography: Rbiblio2020.bib
+csl: apa-6th-edition.csl 
+code_folding: hide
+toc: yes
+---
+
+SESSION 5 more on textual metrics and models
+
+
+#  REVISIONQ
+
+# reload my data
+## NB if I know where to find my .CSV file
+library(readr)
+data1 <- read_csv(file.choose())
+
+
+# change the name of my dataset ?
+
+
+# Get the number of tokens in {quanteda} for the English column
+library(quanteda)
+mycorpus <- corpus(data1$`Conteu (en)`)
+mydfm <- dfm(mycorpus)
+ntok <- ntoken(mydfm)
+data1$ntoken_en <- ntoken(dfm(corpus(data1$`Conteu (en)`)))
+
+
+# STOPWORDS AND WORDCLOUDS ---
+library(quanteda)
+# more at <https://quanteda.io/>
+mycorpus <- corpus(data1$`Conteu (en)`)
+summary(mycorpus)
+
+# stopwords 
+my_dfm <- dfm(mycorpus, remove = stopwords("english"), remove_punct = TRUE)
+my_dfm
+
+#wordcloud
+set.seed(100)
+textplot_wordcloud(my_dfm, min_count = 6, random_order = FALSE,
+                   rotation = .25, 
+                   colors = RColorBrewer::brewer.pal(8,"Dark2"))
+
+
+# lexical diversity
+stat_lexdiv <- textstat_lexdiv(my_dfm)
+head(stat_lexdiv, 5)
+tail(stat_lexdiv, 5)
+
+# readability 
+textstat_readability(mycorpus,measure = "Flesch", remove_hyphens = TRUE,min_sentence_length = 1,
+  max_sentence_length = 10000,intermediate = FALSE)
+scores <- textstat_readability(mycorpus,measure = "Flesch", remove_hyphens = TRUE,min_sentence_length = 1,  max_sentence_length = 10000,intermediate = FALSE)
+
+data1$Flesh <- scores$Flesch
+textstat_readability(txt, measure = c("FOG", "FOG.PSK", "FOG.NRI"))
+
+
+# CORRELATIONS ----
+
+
+loading a file
+data1$Flesh <- as.numeric(data1$Flesh)
+#plot(Y~X)
+plot(data1$Flesh~data1$`Temps moyen passé sur la page (s)`, data=data1)
+
+
+plot(data1$ntoken_en~data1$`Temps moyen passé sur la page (s)`, data=data1)
+
+
+
+# An INITATION TO INTERACTION AND MODELS
+# linear moels : http://rug.mnhn.fr/semin-r/PDF/semin-R_lm_SBallesteros_110308.pdf
+lm(dependent variable  ~ explanatory variable)
+lm(variable à expliquer ~ variable(s) explicative(s))
+model <- lm(data1$ntoken_en~data1$`Temps moyen passé sur la page (s)`)
+model
+plot(model)
+summary.lm(model)
+
+
+## Foor for thought
+# reading time and complexity (Flesch) ?
+# reading time and number of tokens ?
+# number of visitors and number of tokens?
+# number of reading t
+
+## RQ: sentiment scores and number of tokens 
