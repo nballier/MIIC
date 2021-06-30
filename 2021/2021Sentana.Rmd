@@ -1,0 +1,157 @@
+---
+title: "MIIC 4: Some NLP contributions"
+date: "06/2/2021"
+html_notebook:
+  always_allow_html: yes
+  css: template-reveal.css
+  toc: yes
+output:
+  html_document:
+    df_print: paged
+  highlight: tango
+  pdf_document: null
+bibliography: Rbiblio2020.bib
+csl: apa-6th-edition.csl 
+code_folding: hide
+toc: yes
+---
+
+
+# Introduction : on-the-fly NLP analysis ---------
+<http://corenlp.run/> 
+  
+NER: Named Entity Recognition
+
+Sentana : Sentiment Analysis
+  
+# The NLP Tools for the Social Sciences-----
+<https://www.linguisticanalysistools.org/>  
+More on linguistic complexity June 30th.
+
+
+# MORE on Text mining and emotion mining
+# text mining: sentiment analysis (1)
+http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm
+# NRC http://www.purl.org/net/NRCemotionlexicon
+https://cran.r-project.org/web/packages/syuzhet/vignettes/syuzhet-vignette.html
+
+
+# REVISIONS -----------
+
+# reload my data
+## NB if I know where to find my .CSV file
+library(readr)
+data1 <- read_csv(file.choose())
+
+#  summarize the content 
+
+# Get the number of tokens in {quanteda} for the English column
+
+```{r}
+library(quanteda)
+mycorpus <- corpus(data1$`Conteu (en)`)
+mydfm <- dfm(mycorpus)
+ntok <- ntoken(mydfm)
+data1$ntoken_en <- ntoken(dfm(corpus(data1$`Conteu (en)`)))
+
+```
+
+
+# Get the number of tokens in {quanteda} for the French column
+```{r}
+data1$notoken_fr <- ntoken(dfm(corpus(data1$Contenu)))
+```
+# Boxplot number of tokens (French)
+
+```{r}
+boxplotnumberoftokens <- boxplot(data1$notoken_fr,main ="Boxplot Number of Tokens")
+data1$ntoken_fr <- ntoken(dfm(corpus(data1$`Conteu (en)`)))
+```
+
+# Subset my dataset by columns and subsets (editorial vs. transactional)
+```{r}
+table(data1$`Type de page`)
+edito <- data1[data1$`Type de page`=="Editorial",]
+transac <- data1[data1$`Type de page`=="Transactionnel",]
+
+
+# Compare number of tokens for editorial vs transactional pages 
+```{r}
+boxplotnumberoftokensedito <- boxplot(edito$notoken_fr,main ="Boxplot Number of Tokens for Editorial Pages")
+```
+```{r}
+boxplotnumberoftokenstransac <- boxplot(transac$notoken_fr,main ="Boxplot Number of Tokens for Transactional Pages")
+```
+
+
+# TOP 10 pages  ("golden pages")
+```{r}
+library(dplyr) # function arrange()
+ordered_bouncing <- arrange(data1,desc(`Taux de rebond (%)`))
+top10_bouncing <- head(ordered_bouncing,10)
+ordered_visits <- arrange(data1,desc(`Nombre de visites`))
+top10_visits <- head(ordered_visits,10)
+top5_visits <- head(ordered_visits,5)
+ordered_timespent <- arrange(data1,desc(`Temps moyen passé sur la page (s)`))
+top10_timespent <- head(ordered_timespent,10)
+```
+
+
+# FLOP 10 
+```{r}
+class(data1$`Nombre de visites`)
+ordered_visits <- arrange(data1,desc(`Nombre de visites`))
+max <- head(ordered_visits,1)
+print(max$Page)
+flop10visits <-tail(ordered_visits,10)
+flop5visits <-tail(ordered_visits,5)
+
+```
+
+
+# SENTIMENT ANALYSIS with the {syuzhet} package  
+install.packages("syuzhet") # only once
+library(syuzhet)
+
+library(dplyr)
+#select 10 best
+top10 <- data1 %>% 
+arrange(desc(`Temps moyen passé sur la page (s)`))
+
+top10$text <- top10$`Conteu (en)` # simplify the bracketting
+
+# extract all the sentences of the dataset
+s_v <- get_sentences(top10$text)
+# get all sentiment scores
+## be patient
+# list score per line 
+nrc_data <- get_nrc_sentiment(s_v)
+sum_nrctop10 <- apply(nrc_data,2,sum)
+sentiments <- colnames(nrc_data)
+# plot the different sentiments
+barplot(sum_nrctop10,xlab=sentiments)
+
+barplot(sum_nrctop10,xlab=sentiments,main="Sentiments for  Golden Pages")
+
+# TASK adapt to Sentiments for Transactional Pages /  "Sentiments for Top 5 Transactional Pages")
+
+
+
+# HOMEWORK ----
+# Rmarkdown-----------  
+# for your report you may use R markdown
+#https://rmarkdown.rstudio.com/authoring_quick_tour.html
+install.packages("rmarkdown")
+install.packages('knitr') 
+library(rmarkdown)
+library(knitr)
+
+# Fun fact: you may write books with R
+<https://bookdown.org/>
+<https://bookdown.org/yihui/bookdown/>
+<https://www.tidytextmining.com/>  
+  
+#to erase all objects
+#rm(list=ls())
+
+
