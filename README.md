@@ -26,7 +26,7 @@ Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridiscipl
 [Julia Silge and David Robinson (2017) *Text mining with R*, O'Reilly.](https://www.tidytextmining.com/)  
 
 
-**DAY 1 (Feb 10th)**  
+**DAY 1 (Feb 9th)**  
 o	LC : Web SEO & Google Analytics (9h-11h)  
 o	NB : Data science for beginners (Why R?) (11h-13h)  
 The learning-by-doing paradigm  
@@ -34,7 +34,7 @@ The learning-by-doing paradigm
 file formats, datasets, tidy format  
 very basic stats: what do we mean by 'correlation'?
 
-**DAY 2 (March 17th)**  
+**DAY 2 (March 16th)**  
 o	LC : Google Analytics : le détail  (9h-11h)
 o	NB: the Google analytics dataset  (11h-13h)  
 Crash course to using R :  [tutorial](https://paulalisson.github.io/teaching.html)  
@@ -42,7 +42,7 @@ loading a dataset with R
 selecting variables with R, basic data wrangling  
 basic data visualisation ([dataViz](https://www.r-graph-gallery.com/)), basic plots  
 
-**DAY 3 (April 28th)**    
+**DAY 3 (April 20th)**    
 o	LC : crawlers and bots : spelling out the expected content  (9h-11h)
 o	NB: sentiment analysis for beginners : the basics  (11h-13h)  
 [on-the-fly NLP analysis](http://corenlp.run/)  
@@ -50,7 +50,7 @@ o	NB: sentiment analysis for beginners : the basics  (11h-13h)
 Activity 1: Using TAALES to extract sentiment analysis data : basic plots and commentary
 
 
-**DAY 4 (June 2nd)**  
+**DAY 4 (May 27th)**  
 o	LC "que sortez-vous de google analytics" ?   / appli smartkeywords (9h-11h)
 o	NB: hands on session with the data : more advanced scripts for sentiment analysis and quantitative analysis: the R {quanteda} package for readibility metrics  (11h-13h)  
 	corrélation qualité des pages d'un point de vue sémantique & leur performance  
@@ -59,7 +59,7 @@ Activity 2: Using {quanteda} to assess complexity : basic plots and commentary
 [Tutorials](https://tutorials.quanteda.io/)
 
 
-**DAY 5  (June 30th)**  
+**DAY 5  (June 29th)**  
 o	LC :  discussing preliminary findings  (9h-11h)
 o	NB  : interacting with a data scientist (data modelling)  (11h-13h)  
 corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé ..  
@@ -78,12 +78,12 @@ o	NB  : Using the R package for Google Analytics (provisional) (11h-13h)
 
 
 **ASSESSMENT** (report to be uploaded)  
-•	Input :  pour des groupes de 3 personnes  
+•	Input :  pour des groupes de 3-4 personnes  
 o	avec un ficher csv : url / contenu texte / métriques on-page (nombre de sessions / temps passé par page)  
 •	Output  
 o	livrable sur "que sortez vous de google analytics"  : retour client sur les performances de son site
 o	corrélation niveau de lisibilité de la page & temps passé / sentiment & temps passé  
-o corrélation qualité des pages d'un point de vue sémantique & leur performance  
+o  corrélation qualité des pages d'un point de vue sémantique & leur performance  
 
 
 **SKILLS**
