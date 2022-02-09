@@ -1,0 +1,149 @@
+---
+title: "MIIC2021"
+author: "Nicolas Ballier"
+date: "6/27/2020"
+output: 
+ beamer_presentation:
+ keep_tex: yes
+---
+
+
+***
+## 2020-2021 : COURSE OUTLINE
+SESSION 1 : why R? (Why the hell would I code?) \
+SESSION 2 : Data Visualisation (R made more fun) \
+SESSION 3 : Basic Text Mining  \
+SESSION 4 : Basic Data mining : from frequency counts to natural language?? \
+SESSION 5 : Basic MODELLING   \
+SESSION 6 : WRAPPING IT UP / Google analytics with the R package? \
+
+***
+## SESSION 1 : Why R? R (Why the hell would I code?)
+
+***
+## 1. programming language with the command line
+Learning curves \
+![](PIX/LinuxLEarnCurv.jpg){width=80%}
+
+<https://www.reddit.com/r/linuxmemes/comments/erfj2o/learning_curve_for_a_game_but_also_for_linux/>
+
+***
+![](PIX/LearningCurveR.jpg){width=80%}
+
+
+<https://twitter.com/rogierk/status/730863729420701697>
+
+***
+## Why R? 
+R vs Python (Scala, go for Docker, and others) ? \
+the Sky's the limit  \
+(other jobs)  \
+computer scientists / data scientists / programmers/ engineers \
+Number of packages  \
+
+***
+### against R 
+quirky \
+the Arrgh blog \
+<http://arrgh.tim-smith.us/syntax.html>
+
+***
+### Install R and RStudio
+<https://remibacha.com/data-science-r-seo-guide/> \
+Download R  \
+Dowload R for mac \
+Download Rstudio \
+
+***
+## A MINUTE TO UNDERSTAND, A LIFETIME TO MASTER
+"learning curve": a meme, not a myth !
+<https://twitter.com/leahawasser/status/890604301508157441>
+![](PIX/curvRpres.jpg){width=90%}
+
+
+
+
+***
+## 2. An object-oriented programming language
+SYNTAX : 
+object <- function(argument) \
+object types \
+class() \
+summary(object) \
+getwd() # where am I?  \ 
+
+***
+### 3. libraries and functions
+{Rpackage} \
+function() \
+data \
+datasets \
+
+{dply}
+
+***
+### DRILLS  Comment what the function does 
+
+getwd()
+
+
+colours <- c("black", "red", "pink")
+
+***
+```{r, R as calculatar, cache=FALSE }
+ ## Addition
+3+2
+## Multiplication
+4*5
+#[1] 20
+## Exponentiation  
+10^3
+#[1] 1000
+ 
+## Division
+ 1 / 0
+# [ 1 ] In f
+sqrt(100)
+
+```
+
+***
+## INTERNAL FUNCTIONS
+```{r, misc functions3}
+# to erase all objects
+#rm(list=ls())
+
+# where am I? ## to know where your files are saved
+getwd()
+
+## set this directory as working directory
+setwd("~/Desktop/MIIC/data-GoogleAnalytics/bis")
+
+# to install the package called {quanteda}
+#install.packages("quanteda")
+
+#install.packages("tidyverse")
+```
+
+
+
+```{r, misc functions}
+library(quanteda)
+
+# simple example
+    txt <- c(text1 = "This is a sentence, this.", text2 = "A word. Repeated repeated.")
+
+    #
+    ntoken(txt)
+#
+    ntype(txt)
+#    
+    ntoken(char_tolower(txt))  # same
+#    
+    ntype(char_tolower(txt))   # fewer types
+#    
+    ntoken(char_tolower(txt), remove_punct = TRUE)
+#    
+    ntype(char_tolower(txt), remove_punct = TRUE)
+```
+
