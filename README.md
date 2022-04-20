@@ -26,6 +26,10 @@ Alcantara et al. (2018) *Big data et visibilité en ligne. Un enjeu pluridiscipl
 [Julia Silge and David Robinson (2017) *Text mining with R*, O'Reilly.](https://www.tidytextmining.com/)  
 
 
+PAD
+<https://mypads2.framapad.org/mypads/?/mypads/group/miic-9y2nu09bg/pad/view/code-snippets-9g2y6y92r>
+
+
 **DAY 1 (Feb 9th)**  
 o	LC : Web SEO & Google Analytics (9h-11h)  
 o	NB : Data science for beginners (Why R?) (11h-13h)  
